@@ -1,15 +1,10 @@
 const express = require('express');
 
-const routes = require('./routes')
+const routes = require('./routes');
 const config = require('./config');
-
 const setupViewEngine = require('./config/viewEngine');
+
 const app = express();
-
-
-
-
-
 setupViewEngine(app);
 
 
