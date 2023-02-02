@@ -14,11 +14,11 @@ class Cube {
 
     }
 
-    static save(cube) {
+    save(cube) {
         
-        cube.id = db.cubes[db.cubes.length - 1].id
+        this.id = db.cubes[db.cubes.length - 1].id + 1 
             
-        db.cubes.push(cube)
+        db.cubes.push(this)
         const jsonData = JSON.stringify(db, null, 2)
         fs.writeFileSync(path.resolve(__dirname, '../db.json'), jsonData)
     }
